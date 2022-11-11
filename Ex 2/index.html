@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <input type="text" id="value1">
+    <input type="text" id="value2">
+
+    <button onclick="sum()">+</button>
+    <button onclick="subtraction()">-</button>
+    <button onclick="multiplication()">*</button>
+    <button onclick="division()">/</button>
+
+    <br /> <span id="answer">Your Answer is :</span>
+
+    <script>
+
+        function sum() {
+            let number1 = parseInt(document.getElementById("value1").value);
+            let number2 = parseInt(document.getElementById("value1").value);
+
+            document.getElementById("answer").innerHTML = "Your Answer is:" + (number1 + number2);
+        }
+        function subtraction() {
+            let number1 = parseInt(document.getElementById("value1").value);
+            let number2 = parseInt(document.getElementById("value1").value);
+
+            document.getElementById("answer").innerHTML = "Your Answer is:" + (number1 - number2);
+        }
+        function multiplication() {
+            let number1 = parseInt(document.getElementById("value1").value);
+            let number2 = parseInt(document.getElementById("value1").value);
+
+            document.getElementById("answer").innerHTML = "Your Answer is:" + (number1 * number2);
+        }
+        function division() {
+            let number1 = parseInt(document.getElementById("value1").value);
+            let number2 = parseInt(document.getElementById("value1").value);
+
+            document.getElementById("answer").innerHTML = "Your Answer is:" + (number1 / number2);
+        }
+    </script>
+
+</body>
+
+</html>
