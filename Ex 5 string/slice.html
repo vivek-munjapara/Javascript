@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <input type="text" id="source" name="souce" />
+    <input type="text" id="start" name="start" />
+    <input type="text" id="end" name="end" />
+    <button onclick="submit()">Submit</button>
+    <div id="display"></div>
+
+    <script>
+        function submit() {
+
+            let source = document.getElementById('source').value;
+            let startValue = document.getElementById('start').value;
+            let endValue = document.getElementById('end').value;
+
+            let result = source.slice(startValue, endValue);
+
+            document.getElementById('display').innerHTML = result;
+            // console.log(source);
+            // console.log(startValue);
+            // console.log(endValue);
+        }
+
+    </script>
+
+</body>
+
+</html>
