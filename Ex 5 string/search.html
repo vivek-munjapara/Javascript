@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="source" value="rajkot vadodara surat amreli">
+    <input type="text" id="searchterm">
+
+    <button onclick="submit()">Check</button>
+
+    <div id="display"></div>
+    <div id="match"></div>
+    <div id="matchAll"></div>
+    <div id="startsWith"></div>
+
+
+
+    <script>
+
+        function submit() {
+
+
+            let input = document.getElementById("source").value;
+            let searchTerm = document.getElementById("searchterm").value;
+
+
+
+            let myArray = input.indexOf(searchTerm.toLowerCase());
+            let match = input.match(searchTerm.toLowerCase());
+            // let matchAll = input.matchAll(/searchTerm/gi);
+            let start = input.startsWith(searchTerm);
+
+            console.log(match);
+
+            document.getElementById("display").innerHTML = `the occurrence of given input is ${myArray}`;
+            document.getElementById("match").innerHTML = `${match}`;
+            // document.getElementById("matchAll").innerHTML = `${matchAll.from(searchTerm)}`;
+            document.getElementById("startsWith").innerHTML = start;
+
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>

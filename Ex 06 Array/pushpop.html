@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="item">
+    <button onclick="submit()">Submit</button>
+
+    <div id="display"></div>
+    <div id="display2"></div>
+
+    <script>
+        let myArray = [];
+
+
+        function submit() {
+            let item = document.getElementById("item").value;
+
+            if (myArray.includes(item)) {
+                document.getElementById("display2").innerHTML = "given input is already in above list"
+                return false;
+            } else {
+                document.getElementById("display2").innerHTML = "";
+            }
+            myArray.push(item);
+
+            document.getElementById("item").value = "";
+            document.getElementById("display").innerHTML += myArray + "</br>"
+
+            if (item == "") {
+                alert("please input name")
+                return false;
+            } else {
+                return true;
+            }
+
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
