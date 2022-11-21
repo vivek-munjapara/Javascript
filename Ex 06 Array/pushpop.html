@@ -28,20 +28,17 @@
             } else {
                 document.getElementById("display2").innerHTML = "";
             }
-            myArray.push(item);
-
-            document.getElementById("item").value = "";
-            document.getElementById("display").innerHTML += myArray + "</br>"
 
             if (item == "") {
                 alert("please input name")
                 return false;
             } else {
-                return true;
+                myArray.push(item);
             }
+            document.getElementById("item").value = "";
+            document.getElementById("display").innerHTML += myArray + "</br>"
 
         }
-
 
 
 
