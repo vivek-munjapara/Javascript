@@ -34,18 +34,20 @@
 
             if (myArray.includes(item)) {
                 document.getElementById("display2").innerHTML = "given input is already in above list"
-                return false;
+                // return false;
             } else {
                 document.getElementById("display2").innerHTML = "";
             }
 
             if (item == "") {
                 alert("please input name")
-                return false;
+                // return false;
             } else {
                 myArray.push(item);
             }
             document.getElementById("item").value = "";
+
+            
             document.getElementById("display").innerHTML += myArray + `</br>`;
 
         }

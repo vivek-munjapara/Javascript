@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="citynm" value="" placeholder="Enter the city name for sort">
+
+    <button onclick="add()">add</button>
+    <button onclick="sort()">Sort</button>
+
+    <div id="display"></div>
+    <div id="result"></div>
+
+    <script>
+        // "surat", "rajkot", "vadodara", "mehshana"
+        let myArray = [];
+
+        
+        function add() {
+            let value = document.getElementById("citynm").value;
+
+            if (value == "") {
+                alert("please input name")
+            } else {
+                myArray.push(value);
+            }
+            console.log(myArray);
+            // document.getElementById('display').innerHTML = myArray;
+
+        }
+
+
+        function sort() {
+            myArray.sort(function sort(a, b) {
+                return a.length - b.length;
+            })
+        }
+        console.log(myArray);
+        // document.getElementById('result').innerHTML = myArray.join(" ");
+
+    </script>
+</body>
+
+</html>

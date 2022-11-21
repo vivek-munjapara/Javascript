@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="item">
+    <button onclick="add()">Submit</button>
+
+    <div id="display"></div>
+
+    <script>
+        let myArray = [];
+
+        function display() {
+            let text = "";
+
+            for (let i = 0; i < myArray.length; i++) {
+                // text += myArray[i] + "<button onclick='dlt (" + myArray.indexOf(myArray[i]) + ")'>Delete</button>" + `</br>`
+                text += myArray[i] + `<button onclick="dlt (` + myArray.indexOf(myArray[i]) + `) ">Delete</button>` + `</br>`
+            }
+            document.getElementById('display').innerHTML = text;
+        }
+        function add() {
+
+            let item = document.getElementById("item").value;
+
+            myArray.push(item);
+
+            // console.log(myArray);
+            display();
+
+        }
+        function dlt(a) {
+
+            myArray.splice(a, 1)
+            console.log(a);
+            display();
+        }
+
+    </script>
+</body>
+
+</html>
