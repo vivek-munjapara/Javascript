@@ -81,20 +81,26 @@ const menu = [
   },
 ];
 
-// let card = menu.map(display);
+function display() {
+  let myData = menu.map(function (value) {
+    return `
+    
+            <article class="menu-item" >
+            <img id="menuimg" src="${value.img}" alt="menu item" class="photo" />
+          <div class="item-info" id="head1">
 
-// function display(value) {
-//   return `${value.title}`;
-// }
+            <header>
+              <h4 id="menuitem">${value.title}</h4>
+              <h4 id="menuprice" class="price">${value.price}</h4>
+            </header>
 
-// document.getElementById("menuitem").innerHTML = card;
-// console.log(card);
-
-menu.forEach(display);
-
-function display(value) {
-  document.getElementById("menuitem").innerHTML = value.title;
-  document.getElementById("menuimg").innerHTML = value.img;
-  document.getElementById("menuprice").innerHTML = value.price;
-  document.getElementById("menudes").innerHTML = value.desc;
+            <p class="item-text" id="menudes">${value.desc}</p>
+          </div>
+        </article>
+    
+    `;
+  });
+  document.getElementById("divd").innerHTML = myData.join(" ");
+  console.log(myData);
 }
+display();
