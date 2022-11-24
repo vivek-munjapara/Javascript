@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p>input valid only start with 9 to 6 and max length is 10 digit</p>
+    </div>
+    <input type="text" id="mob-num" maxlength="10" onkeypress="check(event)">
+    <!-- <button >Check</button> -->
+    <div id="display"></div>
+    <script>
+
+        // function check() {
+
+        //     let num = document.getElementById("mob-num").value;
+        //     let compr = /[6-9]\d{9}/
+
+        //     if (compr.test(num)) {
+        //         document.getElementById("display").innerHTML = `input is valid`;
+        //     } else {
+        //         document.getElementById("display").innerHTML = `input is invalid`;
+        //     }
+        // }
+
+
+
+
+
+        // function check(evt) {
+
+        //     var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+        //     if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+        //         return false;
+        //     return true;
+
+        // }
+
+
+        function check(event) {
+            var e = event || evt; // for trans-browser compatibility
+            var charCode = e.which || e.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57))
+                return false;
+
+            return true;
+        }
+
+    </script>
+</body>
+
+</html>

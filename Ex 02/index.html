@@ -22,27 +22,30 @@
 
     <script>
 
+        let number1=document.getElementById("value1").value;
+        let number2=document.getElementById("value2").value;
+
         function sum() {
             let number1 = parseInt(document.getElementById("value1").value);
-            let number2 = parseInt(document.getElementById("value1").value);
+            let number2 = parseInt(document.getElementById("value2").value);
 
             document.getElementById("answer").innerHTML = "Your Answer is:" + (number1 + number2);
         }
         function subtraction() {
             let number1 = parseInt(document.getElementById("value1").value);
-            let number2 = parseInt(document.getElementById("value1").value);
+            let number2 = parseInt(document.getElementById("value2").value);
 
             document.getElementById("answer").innerHTML = "Your Answer is:" + (number1 - number2);
         }
         function multiplication() {
             let number1 = parseInt(document.getElementById("value1").value);
-            let number2 = parseInt(document.getElementById("value1").value);
+            let number2 = parseInt(document.getElementById("value2").value);
 
             document.getElementById("answer").innerHTML = "Your Answer is:" + (number1 * number2);
         }
         function division() {
             let number1 = parseInt(document.getElementById("value1").value);
-            let number2 = parseInt(document.getElementById("value1").value);
+            let number2 = parseInt(document.getElementById("value2").value);
 
             document.getElementById("answer").innerHTML = "Your Answer is:" + (number1 / number2);
         }

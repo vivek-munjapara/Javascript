@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <table id="t"></table>
+  <script>
+
+    var t = [
+      {
+        "userId": 1,
+        "id": 1,
+        "title": "delectus aut autem",
+        "completed": false
+      },
+      {
+        "userId": 1,
+        "id": 2,
+        "title": "quis ut nam facilis et officia qui",
+        "completed": false
+      },
+      {
+        "userId": 1,
+        "id": 3,
+        "title": "fugiat veniam minus",
+        "completed": false
+      },
+      {
+        "userId": 1,
+        "id": 4,
+        "title": "et porro tempora",
+        "completed": true
+      }]
+
+    var newaray = t.map(dis);
+
+    // console.log(newaray);
+
+    function dis(value) {
+      return `<tr><td>${value.userId}</td><td>${value.id}</td><td>${value.title}</td><td>${value.completed}</td></tr>`
+    }
+
+    document.getElementById("t").innerHTML = newaray.join("");
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="d" />
+    <!-- <select>
+
+        <option value="start">start</option>
+        <option value="start">end</option>
+        <option value="contains">contains</option>
+    </select> -->
+    <button onclick="SearchData()">Search</button>
+    <table id="table"></table>
+
+
+
+    <script>
+
+
+
+
+        var obj = [
+            {
+                "userId": 1,
+                "id": 1,
+                "title": "delectus aut autem",
+                "completed": false
+            },
+            {
+                "userId": 1,
+                "id": 2,
+                "title": "quis ut nam facilis et officia qui",
+                "completed": false
+            },
+            {
+                "userId": 1,
+                "id": 3,
+                "title": "fugiat veniam minus",
+                "completed": false
+            },
+            {
+                "userId": 1,
+                "id": 4,
+                "title": "et porro tempora",
+                "completed": true
+            },
+            {
+                "userId": 1,
+                "id": 5,
+                "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
+                "completed": false
+            },
+            {
+                "userId": 1,
+                "id": 6,
+                "title": "qui ullam ratione quibusdam voluptatem quia omnis",
+                "completed": false
+            },
+            {
+                "userId": 1,
+                "id": 7,
+                "title": "illo expedita consequatur quia in",
+                "completed": false
+            },
+            {
+                "userId": 1,
+                "id": 8,
+                "title": "quo adipisci enim quam ut ab",
+                "completed": true
+            },
+            {
+                "userId": 1,
+                "id": 9,
+                "title": "molestiae perspiciatis ipsa",
+                "completed": false
+            },
+            {
+                "userId": 1,
+                "id": 10,
+                "title": "illo est ratione doloremque quia maiores aut",
+                "completed": true
+            },
+            {
+                "userId": 1,
+                "id": 11,
+                "title": "vero rerum temporibus dolor",
+                "completed": true
+            }];
+
+
+        function SearchData() {
+            let myvalue = document.getElementById("d").value;
+
+            let myfilterdata = obj.filter(function (value) {
+
+
+                return value.title.indexOf(myvalue) != -1;
+            })
+
+            disaplyArray(myfilterdata)
+            // console.log(myfilterdata);
+
+
+        }
+
+
+        disaplyArray(obj);
+
+        function disaplyArray(mydata) {
+            let data = mydata.map(function (value) {
+
+                return `<tr><td>${value.id}</td><td>${value.title}</td><td>${value.userId}</td><td></td></tr>`
+            })
+
+
+            document.getElementById("table").innerHTML = data.join(" ");
+
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

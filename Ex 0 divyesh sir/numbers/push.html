@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="item" />
+    <div id="test"></div>
+    <button onclick="saveitem()">Save</button>
+    <script>
+
+        let mynumbers = ["org", "ban"];
+
+
+
+
+
+        function saveitem() {
+            
+            let item = document.getElementById("item").value;
+            mynumbers.push(item);
+            document.getElementById("item").value = "";
+            console.log(mynumbers);
+
+
+        }
+
+
+
+        function display() {
+            for (let index = 0; index < mynumbers.length; index++) {
+
+
+                document.getElementById("test").innerHTML += mynumbers[index];;
+            }
+
+        }
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

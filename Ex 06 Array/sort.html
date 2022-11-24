@@ -12,7 +12,7 @@
     <input type="text" id="citynm" value="" placeholder="Enter the city name for sort">
 
     <button onclick="add()">add</button>
-    <button onclick="sort()">Sort</button>
+    <button onclick="srt()">Sort</button>
 
     <div id="display"></div>
     <div id="result"></div>
@@ -21,7 +21,7 @@
         // "surat", "rajkot", "vadodara", "mehshana"
         let myArray = [];
 
-        
+
         function add() {
             let value = document.getElementById("citynm").value;
 
@@ -30,19 +30,16 @@
             } else {
                 myArray.push(value);
             }
-            console.log(myArray);
-            // document.getElementById('display').innerHTML = myArray;
 
         }
 
 
-        function sort() {
-            myArray.sort(function sort(a, b) {
+        function srt() {
+            let sorted = myArray.sort(function (a, b) {
                 return a.length - b.length;
             })
+            document.getElementById('result').innerHTML = sorted.join(" ");
         }
-        console.log(myArray);
-        // document.getElementById('result').innerHTML = myArray.join(" ");
 
     </script>
 </body>

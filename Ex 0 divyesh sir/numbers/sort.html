@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="dis"></div>
+    <script>
+
+
+        const data = [{
+            firstname: "rahul",
+            lastname: "patel",
+            address: "vadodara"
+        },
+
+        {
+            firstname: "tejas",
+            lastname: "patel",
+            address: "pune"
+        },
+        {
+            firstname: "test",
+            lastname: "patel",
+            address: "pune"
+        }
+
+        ]
+
+
+
+
+        data.sort(function (a, b) {
+            if (a.lastname > b.lastname) {
+                return 1;
+            }
+            else if (a.lastname == b.lastname) {
+                if (a.firstname > b.firstname) {
+                    return 1;
+                }
+                else {
+                    return -1;
+                }
+
+            }
+            else {
+                return -1;
+            }
+        });
+
+        console.log(data);
+
+
+    </script>
+
+</body>
+
+</html>
