@@ -264,16 +264,15 @@ const products = [
       rate: 3.6,
       count: 145,
     },
-  },
+},
 ];
 
+let item = 0;
 
 function display() {
     
     let disData = products.map(function (value) {
-        return `
-        
-        <div class="row p-2 bg-white border rounded mt-2">
+        return `<div class="row p-2 bg-white border rounded mt-2">
                     <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded align-middle product-image"
                             src="${value.image}"></div>
                     <div class="col-md-6 mt-1">
@@ -291,16 +290,23 @@ function display() {
                         </div>
                         <h4 class="text-success">Free shipping</h4>
                         <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm"
-                                type="button"><h4>Add to cart</h4></button><button class="btn btn-outline-primary btn-sm mt-2"
+                                type="button" onclick="addToCart()"><h4>Add to cart</h4></button><button class="btn btn-outline-primary btn-sm mt-2"
                                 type="button"><h4>Add to wishlist</h4></button></div>
                     </div>
-                </div>
-        `;
+                </div>`;
     })
-
+    document.getElementById('item').innerHTML = item;
     document.getElementById("card").innerHTML = disData.join("");
 }
 
-display()
+display();
+
+function addToCart() {
+    
+    item = item + 1;
+
+    document.getElementById('item').innerHTML = item;
+
+};
 
 
