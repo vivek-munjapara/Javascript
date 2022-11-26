@@ -1,4 +1,4 @@
-const rawArray = [
+let rawArray = [
   {
     userId: 1,
     id: 1,
@@ -1210,15 +1210,45 @@ const rawArray = [
   },
 ];
 
+// let data = [];
 let page = 20;
+let totalPage = "";
+let startPage = 1;
 
-const filterData = rawArray.map(function (value) {
-  return `<tr>
+function displayPage() {
+  totalPage = Math.ceil(rawArray.length / page);
+  console.log(totalPage);
+  disButton(startPage, totalPage);
+  displayData(0,page);
+}
+
+function displayData(start, end) {
+  let myData = rawArray.slice(start, end);
+
+  const filterData = myData.map(function (value) {
+    return `<tr>
                     <td>${value.id}</td>
                     <td>${value.userId}</td>
                     <td>${value.title}</td>
                     <td>${value.completed}</td> 
                     </tr>`;
-});
+  });
 
-document.getElementById("tbl").innerHTML = filterData.join("");
+  document.getElementById("tbl").innerHTML = filterData.join("");
+}
+displayPage();
+
+function disButton(a, b) {
+  for (let index = a; index < b; index++) {
+    document.getElementById(
+      "btn"
+    ).innerHTML += `<button onclick="button(${index})">${index}</button>`;
+  }
+}
+
+function button(startPage) {
+  let startButton = (startPage - 1) * page;
+  let endButton = startButton + 20;
+
+  displayData(startButton, endButton);
+}
