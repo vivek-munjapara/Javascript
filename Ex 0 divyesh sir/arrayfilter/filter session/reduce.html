@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+
+        const numbers = [1, 2, 3, 4, 4];
+
+        let myproducts = [
+            {
+                productID: 1,
+                qua: 5,
+                price: 100
+            },
+            {
+                productID: 2,
+                qua: 5,
+                price: 200
+            },
+            {
+                productID: 3,
+                qua: 5,
+                price: 300
+            }
+        ]
+
+        let d = myproducts.reduce(function (pre, value) {
+
+            return pre + value.price * value.qua
+        }, 0)
+
+
+        console.log(d);
+
+    </script>
+
+</body>
+
+</html>
