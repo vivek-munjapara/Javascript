@@ -264,15 +264,16 @@ const products = [
       rate: 3.6,
       count: 145,
     },
-},
+  },
 ];
 
 let item = 0;
-
+let cart = [];
 function display() {
-    
-    let disData = products.map(function (value) {
-        return `<div class="row p-2 bg-white border rounded mt-2">
+  document.getElementById("card").innerHTML = "";
+
+  let disData = products.map(function (value, index) {
+    return `<div class="row p-2 bg-white border rounded mt-2">
                     <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded align-middle product-image"
                             src="${value.image}"></div>
                     <div class="col-md-6 mt-1">
@@ -290,24 +291,63 @@ function display() {
                         </div>
                         <h4 class="text-success">Free shipping</h4>
                         <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm"
-                                type="button" onclick="addToCart()"><h4>Add to cart</h4></button><button class="btn btn-outline-primary btn-sm mt-2"
+                                type="button" onclick="addToCart(${index})"><h4>Add to cart</h4></button><button class="btn btn-outline-primary btn-sm mt-2"
                                 type="button"><h4>Add to wishlist</h4></button></div>
                     </div>
                 </div>`;
-    })
-    document.getElementById('item').innerHTML = item;
-    document.getElementById("card").innerHTML = disData.join("");
+  });
+  document.getElementById("card").innerHTML = disData.join("");
 }
 
 display();
 
-function addToCart() {
-    
-    item = item + 1;
+function addToCart(bindex) {
+  let item = products.filter(function (value, index) {
+    return bindex == index;
+  });
 
-    document.getElementById('item').innerHTML = item;
+  // console.log(item);
+  if (cart.includes(item[0])) {
+    return false;
+  } else {
+    cart.push(item[0]);
+  }
+  document.getElementById("item").innerHTML = cart.length;
+}
 
-  console.log(item);
-};
+function discart() {
+  document.getElementById("card").innerHTML = "";
 
+  let disData = cart.map(function (value, index) {
+    return `<div class="row p-2 bg-white border rounded mt-2">
+                    <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded align-middle product-image"
+                            src="${value.image}"></div>
+                    <div class="col-md-6 mt-1">
+                        <h3>${value.title}</h3>
+                        <div class="d-flex flex-row">
+                            <div class="ratings mr-2"><h4>Rating: ${value.rating.rate} </h4></div>
+                        </div>
+                        <div class="mt-1 mb-1 spec-1"><span><h4>Category: ${value.category}</h4></span></div>
+                        <div class="mt-1 mb-1 spec-1"><span></span></div>
+                        <p class="text-justify text-truncate para mb-0">Description:${value.description}<br><br></p>
+                    </div>
+                    <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+                        <div class="d-flex flex-row align-items-center">
+                            <h4 class="mr-1"> Price: ${value.price}</h4><span class="strike-text"></span>
+                        </div>
+                        <h4 class="text-success">Free shipping</h4>
+                        <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm"
+                                type="button" onclick="addToCart(${index})"><h4>Add to cart</h4></button><button class="btn btn-outline-primary btn-sm mt-2"
+                                type="button"><h4>Add to wishlist</h4></button></div>
+                    </div>
+                </div>`;
+  });
 
+  
+  document.getElementById("card").innerHTML = disData.join("");
+  
+  if (cart.length == 0) {
+    document.getElementById("error").innerHTML = "Your Cart is Empty";
+  }
+}
+// function home();

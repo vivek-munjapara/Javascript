@@ -29,7 +29,11 @@
     height: 43px;
     cursor: pointer;
 }
-
+#error{
+    font-size: 3rem;
+    text-align: center;
+    align-items: center;
+}
 .cart-button {
     background-color: #2469d9;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .23), inset 1px 1px 0 0 hsla(0, 0%, 100%, .2);
