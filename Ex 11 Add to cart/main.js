@@ -307,6 +307,7 @@ function addToCart() {
 
     document.getElementById('item').innerHTML = item;
 
+  console.log(item);
 };
 
 
