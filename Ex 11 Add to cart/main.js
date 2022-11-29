@@ -269,6 +269,7 @@ const products = [
 
 let item = 0;
 let cart = [];
+
 function display() {
   document.getElementById("card").innerHTML = "";
 
@@ -306,12 +307,15 @@ function addToCart(bindex) {
     return bindex == index;
   });
 
-  // console.log(item);
   if (cart.includes(item[0])) {
     return false;
   } else {
+
+    item[0]["qty"] = 1;
     cart.push(item[0]);
   }
+
+  console.log(item);
   document.getElementById("item").innerHTML = cart.length;
 }
 
@@ -335,6 +339,18 @@ function discart() {
                         <div class="d-flex flex-row align-items-center">
                             <h4 class="mr-1"> Price: ${value.price}</h4><span class="strike-text"></span>
                         </div>
+                        <div class="d-flex flex-row align-items-center">
+                        <h4 class="mr-1">
+                          <label for="">Select Qty:</label>
+                          <select id="totalQty" onchange=addQty()>
+                                  <option value="1">${value.qty}</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                  <option value="4">4</option>
+                                  <option value="5">5</option>
+                          </select> 
+                        </h4><span class="strike-text"></span>
+                        </div>
                         <h4 class="text-success">Free shipping</h4>
                         <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm"
                                 type="button" onclick="addToCart(${index})"><h4>Add to cart</h4></button><button class="btn btn-outline-primary btn-sm mt-2"
@@ -343,11 +359,20 @@ function discart() {
                 </div>`;
   });
 
-  
   document.getElementById("card").innerHTML = disData.join("");
-  
+
   if (cart.length == 0) {
     document.getElementById("error").innerHTML = "Your Cart is Empty";
+  } else {
+    document.getElementById("error").innerHTML = "";
   }
 }
-// function home();
+
+// console.log(item);
+// console.log(cart);
+function addQty() {
+  let finalqty = +document.getElementById("totalQty").value;
+
+  // if
+  console.log(finalqty);
+}

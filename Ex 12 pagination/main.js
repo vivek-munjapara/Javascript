@@ -1210,16 +1210,14 @@ let rawArray = [
   },
 ];
 
-// let data = [];
-let page = 20;
+let page = 10;
 let totalPage = "";
 let startPage = 1;
 
 function displayPage() {
   totalPage = Math.ceil(rawArray.length / page);
-  console.log(totalPage);
   disButton(startPage, totalPage);
-  displayData(0,page);
+  displayData(0, page);
 }
 
 function displayData(start, end) {
@@ -1236,10 +1234,13 @@ function displayData(start, end) {
 
   document.getElementById("tbl").innerHTML = filterData.join("");
 }
+
 displayPage();
 
 function disButton(a, b) {
-  for (let index = a; index < b; index++) {
+  document.getElementById("btn").innerHTML = "";
+
+  for (let index = a; index <= b; index++) {
     document.getElementById(
       "btn"
     ).innerHTML += `<button onclick="button(${index})">${index}</button>`;
@@ -1248,7 +1249,12 @@ function disButton(a, b) {
 
 function button(startPage) {
   let startButton = (startPage - 1) * page;
-  let endButton = startButton + 20;
+  let endButton = startButton + page;
 
   displayData(startButton, endButton);
+}
+
+function displayAdd() {
+  page = +document.getElementById("perPagedisplay").value;
+  displayPage();
 }
