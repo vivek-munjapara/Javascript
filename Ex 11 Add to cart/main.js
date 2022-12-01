@@ -342,7 +342,7 @@ function discart() {
                         <div class="d-flex flex-row align-items-center">
                         <h4 class="mr-1">
                           <label for="">Select Qty:</label>
-                          <select id="totalQty" onchange=addQty()>
+                          <select  onchange=addQty(${index},this)>
                                   <option value="1">${value.qty}</option>
                                   <option value="2">2</option>
                                   <option value="3">3</option>
@@ -370,9 +370,9 @@ function discart() {
 
 // console.log(item);
 // console.log(cart);
-function addQty() {
-  let finalqty = +document.getElementById("totalQty").value;
+function addQty(index,t) {
+  let finalqty = +t.value;
 
-  // if
-  console.log(finalqty);
+  cart[index].qty = finalqty;
+  // console.log(finalqty);
 }
