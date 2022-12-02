@@ -310,7 +310,6 @@ function addToCart(bindex) {
   if (cart.includes(item[0])) {
     return false;
   } else {
-
     item[0]["qty"] = 1;
     cart.push(item[0]);
   }
@@ -359,6 +358,9 @@ function discart() {
                 </div>`;
   });
 
+  document.getElementById("priceTotal").innerHTML = "Total Price :" +cart.reduce( (pre, value) => pre + value.price * value.qty, 0);
+  // console.log(lll);
+
   document.getElementById("card").innerHTML = disData.join("");
 
   if (cart.length == 0) {
@@ -370,9 +372,12 @@ function discart() {
 
 // console.log(item);
 // console.log(cart);
-function addQty(index,t) {
+
+function addQty(index, t) {
   let finalqty = +t.value;
 
   cart[index].qty = finalqty;
-  // console.log(finalqty);
+discart();
 }
+
+

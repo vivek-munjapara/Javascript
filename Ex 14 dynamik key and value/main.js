@@ -4,12 +4,12 @@ fetch("https://jsonplaceholder.typicode.com/users")
 
 var myRawData = [];
 
-
 function display(y) {
-  myRawData=y
-  document.getElementById("tbl").innerHTML = y
-    .map((value) => {
-      return `<tr><td>${value.id}</td><td>${value.name}</td><td>${value.username}</td><td>${value.body}</td></tr>`;
-    })
-    .join("");
+  myRawData = y;
+
+  for (const key in myRawData) {
+    let disData= myRawData.map(){
+      return `<tr></tr>`
+    }
+  }
 }
