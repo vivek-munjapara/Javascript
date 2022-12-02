@@ -4,9 +4,12 @@ fetch("https://jsonplaceholder.typicode.com/users")
 
 
 function display(y) {
+  
   let tbody = y.map((value) => {
+  
     let trow = "";
     let obj1 = {};
+  
     for (const key in value) {
       obj1 = value[key]
       if ( typeof obj1 === 'object') {
