@@ -1,10 +1,6 @@
 let arry = [];
 let data = document.getElementsByTagName("input");
 
-// for (let index = 0; index < data.length; index++) {
-//   ob[data[index].name] = data[index].value;
-// }
-// arry.push(ob);
 
 function submit() {
   let ob = {};
