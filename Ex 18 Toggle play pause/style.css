@@ -1,0 +1,35 @@
+.switchdft {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    border-radius: 34px;
+    background-color: rgb(216, 216, 216);
+    transition: .4s;
+}
+
+.switchclk {
+    background-color: rgb(0, 115, 65);
+    transition: .4s;
+}
+
+input {
+    display: none;
+}
+
+.buttondft {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 4px;
+    background-color: rgb(255, 255, 255);
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+.buttonclk {
+    transform: translateX(26px);
+    transition: .4s;
+}
