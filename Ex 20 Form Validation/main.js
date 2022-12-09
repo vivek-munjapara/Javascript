@@ -10,6 +10,15 @@ validation = () => {
         if (iterator.value.length == 0) {
             error(i, "Please enter a Value");
         }
+        else if (iterator.name == "mnumber") {
+            if (!Number.isInteger(parseInt(iterator.value))) {
+                error(i, "Please Number Only");
+            }
+        } else if (iterator.name == "email") {
+            if (iterator.value.indexOf("@") == -1) {
+                error(i, "Please valid email id");
+            }
+        }
         i += 1;
 
     }
