@@ -1,0 +1,20 @@
+.frm {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: warp;
+    width: 700px;
+    border: 1px solid red;
+    margin: auto;
+    align-items: center;
+}
+
+form label {
+    display: inline-block;
+    width: 150px;
+    padding: 10px 20px;
+}
+
+.frm button {
+    margin-top: 20px;
+    margin: 8px 20px;
+}
