@@ -13,11 +13,19 @@ getvalue = () => {
         val[iterator.name] = iterator.value;
 
     }
-
+    
+    // validation start
 
     for (const iterator of formitem) {
         // console.log(iterator);
-        document.getElementsByClassName("error")[i].innerHTML = "";
+
+        if (iterator.type != "checkbox") {
+            document.getElementsByClassName("error")[i].innerHTML = "";
+        }
+
+
+
+
         if (iterator.value.length == 0) {
             error(i, "Please enter a Value");
             validate = false;
@@ -38,13 +46,13 @@ getvalue = () => {
         i += 1;
 
     }
+    
+    // validation ends here
 
     if (validate != false) {
         // console.log("blank");
         frminput.push(val);
     }
-
-
 }
 
 error = (id, error) => {
