@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Local Storage</title>
+    <title>Cascading menu</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div>
-        <form action="">
-            <input type="text" name="fname" id="fname" placeholder="Please input name">
-        </form>
-        <button onclick="submit()">Submit</button>
+        <label for="">Country</label>
+        <select id="country" onchange="selectState()"></select>
+
+        <label for="">State</label>
+        <select id="state" onchange="selectCity()"></select>
+
+        <label for="">City</label>
+        <select id="city"></select>
     </div>
     <script src="main.js"></script>
 </body>
