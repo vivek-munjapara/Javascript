@@ -601,26 +601,50 @@ const myObj = [
     }
 ];
 
+let mykeys = [];
 
 displaytable(myObj);
 
+
 function displaytable(printA) {
+    mykeys = [];
+
+
     let disarray = printA.map(function (value) {
-        return `<tr><td>${value.userId}</td><td>${value.id}</td><td>${value.title}</td><td>${value.body}</td></tr>`;
+        return `<tr><td>${value.userId}</td>
+                    <td>${value.id}</td>
+                    <td>${value.title}</td>
+                    <td>${value.body}</td>
+                </tr>`;
     })
 
     // console.log(disarray);
+
+    for (const key in myObj[0]) {
+        mykeys.push(key);
+    }
+
+    let th =  mykeys.map((value) => {
+        return `<th>${value}</th>`;
+    }).join("");
+
+
+
+
     try {
         document.getElementById("load").style.display = "block";
-        
+
         setTimeout(() => {
             document.getElementById("load").style.display = "none";
-        },2000)
+        }, 2000)
     }
     finally {
         setTimeout(() => {
+            
+            document.getElementById("headrow").innerHTML = th;
+
             document.getElementById("tbl").innerHTML = disarray.join("");
-        },3000)
+        }, 2000)
     }
 }
 
@@ -633,8 +657,7 @@ function search() {
 
     })
 
-            displaytable(resultdata);
+    displaytable(resultdata);
 
-    }
+}
 
-   

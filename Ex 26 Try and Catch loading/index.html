@@ -10,9 +10,27 @@
 </head>
 
 <body>
-    <input type="text" id="searchdata">
-    <button onclick="search()">Search</button>
-    <table id="tbl"></table>
+    <div class="inpt">
+        <input type="text" id="searchdata" placeholder="Search here">
+        <button onclick="search()">Search</button>
+    </div>
+
+
+<table id="customers">
+    <thead>
+        <tr id="headrow">
+            <!-- <td>User Id</td>
+            <td>Id</td>
+            <td>Title</td>
+            <td>Body</td> -->
+        </tr>
+    </thead>
+    <tbody id="tbl"></tbody>
+</table>
+
+
+
+    <!-- <table id="tbl"></table> -->
     <div id="load">
         <span class="loader"></span>
     </div>

@@ -11,7 +11,7 @@ display = (data) => {
   myData = data;
 
   document.getElementById("tbl").innerHTML = data.map(function (value) {
-      return `<tr>
+    return `<tr>
                   <td>${value.userId}</td>
                   <td>${value.id}</td>
                   <td>${value.title}</td>
