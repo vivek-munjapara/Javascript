@@ -1,5 +1,5 @@
 ﻿{
-    "connectionString": "mongodb://localhost:27017/test",
+    "connectionString": "mongodb://127.0.0.1:27017/test",
     "secret": "@ABC@##@234",
     "emailFrom": "divyesh2198@gmail.com",
     "smtpOptions": {
