@@ -607,44 +607,62 @@ fetch("https://jsonplaceholder.typicode.com/posts")
 
 let mykeys = [];
 
+
 function display(myObj) {
+    
     mykeys = [];
-    let disarray = myObj.map(function (value) {
-        return `<tr><td>${value.userId}</td>
-                    <td>${value.id}</td>
-                    <td>${value.title}</td>
-                    <td>${value.body}</td>
-                </tr>`;
-    })
-
-    // console.log(disarray);
-
+    
     for (const key in myObj[0]) {
         mykeys.push(key);
     }
+
+    mykeys.push("Action");
 
     let th = mykeys.map((value) => {
         return `<th>${value}</th>`;
     }).join("");
 
+    
+    
+    let disarray = myObj.map(function (value, index) {
+        return `<tr>
+                    <td>${value.userId}</td>
+                    <td>${value.id}</td>
+                    <td>${value.title}</td>
+                    <td>${value.body}</td>
+                    <td style="width: 130px;">
+                        <button class="btn" onclick="editContent(${index})">Edit</button>
+                        <button class="btn" onclick="deleteContent(${index})">Delete</button>
+                    </td>
+                </tr>`;
+    })
 
+    // console.log(disarray);
 
-
-    try {
-        document.getElementById("load").style.display = "block";
-
-        setTimeout(() => {
-            document.getElementById("load").style.display = "none";
-        }, 2000)
+   
+    deleteContent = (index) => {
+        myObj.splice(index, 1);
+        display(myObj);
     }
-    finally {
-        setTimeout(() => {
+
+
+
+
+    // try {
+    //     document.getElementById("load").style.display = "block";
+
+    //     setTimeout(() => {
+    //         document.getElementById("load").style.display = "none";
+    //     }, 1000)
+    // }
+    // finally {
+    //     setTimeout(() => {
 
             document.getElementById("headrow").innerHTML = th;
 
             document.getElementById("tbl").innerHTML = disarray.join("");
-        }, 2000)
-    }
+    //     }, 1000)
+    // }
 }
 
 
