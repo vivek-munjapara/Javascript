@@ -606,13 +606,13 @@ fetch("https://jsonplaceholder.typicode.com/posts")
     .then(myObj => display(myObj));
 
 let mykeys = [];
-
+let rawData = [];
 
 function display(myObj) {
-    
+    rawData = myObj
     mykeys = [];
-    
-    for (const key in myObj[0]) {
+
+    for (const key in rawData[0]) {
         mykeys.push(key);
     }
 
@@ -622,9 +622,9 @@ function display(myObj) {
         return `<th>${value}</th>`;
     }).join("");
 
-    
-    
-    let disarray = myObj.map(function (value, index) {
+
+
+    let disarray = rawData.map(function (value, index) {
         return `<tr>
                     <td>${value.userId}</td>
                     <td>${value.id}</td>
@@ -639,9 +639,47 @@ function display(myObj) {
 
     // console.log(disarray);
 
-   
+    let ediItem = -1;
+    editContent = (index) => {
+
+        ediItem = index;
+        document.querySelector(".frm").style.display = "block";
+
+        document.getElementById("userId").innerHTML = rawData[index].userId;
+        document.getElementById("id").innerHTML = rawData[index].id;
+        document.getElementById("title").innerHTML = rawData[index].title;
+        document.getElementById("body").innerHTML = rawData[index].body;
+
+
+
+    }
+
+
+    document.getElementById("userId").isContentEditable;
+    document.getElementById("id").isContentEditable;
+    document.getElementById("title").isContentEditable;
+    document.getElementById("body").isContentEditable;
+
+    saveData = () => {
+        if (ediItem != -1) {
+            rawData[ediItem].userId = document.getElementById('userId').innerHTML;
+            rawData[ediItem].title = document.getElementById('title').innerHTML;
+            rawData[ediItem].body = document.getElementById('body').innerHTML;
+        }
+        document.querySelector(".frm").style.display = "none";
+        display(rawData);
+
+    }
+
+
+
+
+
+
     deleteContent = (index) => {
-        myObj.splice(index, 1);
+        if (confirm("Are you sure to delete the data") == true) {
+            myObj.splice(index, 1);
+        }
         display(myObj);
     }
 
@@ -658,12 +696,11 @@ function display(myObj) {
     // finally {
     //     setTimeout(() => {
 
-            document.getElementById("headrow").innerHTML = th;
+    document.getElementById("headrow").innerHTML = th;
+    document.getElementById("headrow2").innerHTML = th;
 
-            document.getElementById("tbl").innerHTML = disarray.join("");
+    document.getElementById("tbl").innerHTML = disarray.join("");
     //     }, 1000)
     // }
 }
-
-
 

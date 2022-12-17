@@ -10,19 +10,44 @@
 </head>
 
 <body>
-    <!-- <div class="inpt">
-        <input type="text" id="searchdata" placeholder="Search here">
-        <button onclick="search()">Search</button>
-    </div> -->
+
+    <div class="frm">
+        <table id="popmenu">
+            <thead>
+                <tr id="headrow2">
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p id="userId" contenteditable="true"> </p>
+                    </td>
+                    <td>
+                        <p id="id" contenteditable="true"></p>
+                    </td>
+                    <td>
+                        <p id="title" contenteditable="true"></p>
+                    </td>
+                    <td>
+                        <p id="body" contenteditable="true"> </p>
+                    </td>
+                    <td><button onclick="saveData()">Save</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
 
-    <table id="customers">
+    <table id="customers" class="table">
         <thead>
             <tr id="headrow">
             </tr>
         </thead>
-        <tbody id="tbl"></tbody>
+        <tbody id="tbl">
+        </tbody>
     </table>
+
+
 
 
     <!-- <div id="load">

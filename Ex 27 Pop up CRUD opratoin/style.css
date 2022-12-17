@@ -1,38 +1,45 @@
-.inpt {
-    display: flex;
-    /* flex-direction: column; */
-    width: 400px;
-    margin: auto;
-    padding: 20px;
+.frm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #ffffff;
+    box-shadow: 0px 0px 100px 5px #1e1e1e;
+    display: none;
+
+}
+.frm p{
+    display: inline;
+    outline: none;
 }
 
-.inpt input {
-    width: 300px;
-    height: 30px;
-    font-size: 20px;
-}
-
-.inpt button {
-    margin-left: 10px;
-    font-size: 20px;
-}
 
 #customers {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
 }
+#popmenu {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+}
 
 #customers td,
+#popmenu td,
 #customers th,
+#popmenu button,
 #customers .btn {
     border: 1px solid #ddd;
     padding: 8px;
-    /* width: 100px; */
 }
 
 #customers .btn:hover {
     background-color: #ec8d26;
+    font-weight: 700;
+}
+#popmenu button:hover {
+    background-color: #068c2c;
+    color: #ffff;
     font-weight: 700;
 }
 
@@ -47,11 +54,20 @@
 #customers th {
     padding-top: 12px;
     padding-bottom: 12px;
-    text-align: left;
+    text-align: center;
     background-color: #04aa6d;
     color: white;
-    max-width: 50px;
+    min-width: 50px;
 }
+#popmenu th {
+    padding: 12px;
+    text-align: center;
+    background-color: #04aa6d;
+    color: white;
+    min-width: 50px;
+}
+
+/* ...........................................loder.......................................... */
 
 #load {
     display: flex;
