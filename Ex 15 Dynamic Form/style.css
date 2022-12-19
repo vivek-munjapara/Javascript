@@ -19,7 +19,7 @@ form {
 }
 form label {
   display: inline-block;
-  width: 150px;
+  width: 100px;
   margin: 5px;
   /* border: blue 1px solid; */
 }
