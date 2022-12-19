@@ -639,10 +639,10 @@ function display(myObj) {
 
     // console.log(disarray);
 
-    let ediItem = -1;
+    let editItem = -1;
     editContent = (index) => {
 
-        ediItem = index;
+        editItem = index;
         document.querySelector(".frm").style.display = "block";
 
         document.getElementById("userId").innerHTML = rawData[index].userId;
@@ -661,19 +661,15 @@ function display(myObj) {
     document.getElementById("body").isContentEditable;
 
     saveData = () => {
-        if (ediItem != -1) {
-            rawData[ediItem].userId = document.getElementById('userId').innerHTML;
-            rawData[ediItem].title = document.getElementById('title').innerHTML;
-            rawData[ediItem].body = document.getElementById('body').innerHTML;
+        if (editItem != -1) {
+            rawData[editItem].userId = document.getElementById('userId').innerHTML;
+            rawData[editItem].title = document.getElementById('title').innerHTML;
+            rawData[editItem].body = document.getElementById('body').innerHTML;
         }
         document.querySelector(".frm").style.display = "none";
         display(rawData);
 
     }
-
-
-
-
 
 
     deleteContent = (index) => {
