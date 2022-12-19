@@ -3,30 +3,37 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .form {
-  width: 50%;
+  width: 70%;
   margin: auto;
 }
+
 h1 {
   text-align: center;
+  padding-bottom: 20px;
 }
 
 form {
-  /* border: 1px red solid; */
-  align-items: center;
-  margin: auto;
-  width: 380px;
+  width: 636px;
 }
+
 form label {
   display: inline-block;
-  width: 100px;
+  width: 150px;
   margin: 5px;
-  /* border: blue 1px solid; */
+
 }
+
 input {
   margin: 5px;
-  width: 200px;
+  width: 300px;
 }
+
+.error {
+  color: #f22323;
+}
+
 .form button {
   align-items: center;
   margin-left: 250px;
