@@ -14,7 +14,7 @@ getvalue = () => {
     // console.log(formitem[0]);
 
     let val = {};
-    let validate = true;
+    const validate = true;
 
     let i = 0;
 

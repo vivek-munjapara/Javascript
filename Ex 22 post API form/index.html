@@ -10,49 +10,55 @@
 </head>
 
 <body>
-    <div>
-        <form id="frm">
-            <div>
-                <label for="">Please Enter Ms/Miss/Mrs</label>
+    <div class="row">
+        <div class="col-md-12">
+            <form id="frm">
+
+                <h1> Sign Up </h1>
+
+
+                <label for="">Please Enter Ms/Miss/Mrs: </label>
                 <select name="title" id="title">
                     <option value="Mr">Mr</option>
                     <option value="Miss">Miss</option>
                     <option value="Mrs">Mrs</option>
                 </select>
-                <span class="error"></span>
-            </div>
-            <div>
+                <p class="error"></p>
+
+
                 <label for="">First Name</label>
                 <input type="text" name="firstName" id="firstName">
-                <span class="error"></span>
-            </div>
-            <div>
+                <p class="error"></p>
+
+
                 <label for="">Last Name</label>
                 <input type="text" name="lastName" id="lastName">
-                <span class="error"></span>
-            </div>
-            <div>
+                <p class="error"></p>
+
+
                 <label for="">Email</label>
                 <input type="text" name="email" id="email">
-                <span class="error"></span>
-            </div>
-            <div>
+                <p class="error"></p>
+
+
                 <label for="">Password</label>
                 <input type="password" name="password" id="password">
-                <span class="error"></span>
-            </div>
-            <div>
+                <p class="error"></p>
+
+
                 <label for="">Confirm Password</label>
                 <input type="password" name="confirmPassword" id="confirmPassword">
-                <span class="error"></span>
-            </div>
-            <div>
-                <input type="checkbox" name="acceptTerms" value="true" checked id="acceptTerms"> I agree the terms and
-                conditions.
-            </div>
+                <p class="error"></p>
 
-        </form>
-        <button onclick="getvalue()">Submit</button>
+
+                <input type="checkbox" name="acceptTerms" value="true" checked id="acceptTerms"> I agree the terms
+                and
+                conditions.
+
+
+            </form>
+            <button onclick="getvalue()">Submit</button>
+        </div>
     </div>
 
 
