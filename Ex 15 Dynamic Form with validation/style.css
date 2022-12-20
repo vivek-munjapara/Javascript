@@ -32,6 +32,8 @@ input {
 
 .error {
   color: #f22323;
+  /* position: absolute; */
+  background-color: rgb(255, 255, 255);
 }
 
 .form button {

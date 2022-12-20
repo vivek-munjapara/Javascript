@@ -11,7 +11,6 @@ getvalue = () => {
 
     for (const iterator of frm) {
         val[iterator.name] = iterator.value;
-
     }
     
     // validation start
@@ -44,6 +43,9 @@ getvalue = () => {
             }
         }
         i += 1;
+
+
+        
 
     }
     
