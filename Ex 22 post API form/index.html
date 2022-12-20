@@ -13,34 +13,44 @@
     <div>
         <form id="frm">
             <div>
+                <label for="">Please Enter Ms/Miss/Mrs</label>
+                <select name="title" id="title">
+                    <option value="Mr">Mr</option>
+                    <option value="Miss">Miss</option>
+                    <option value="Mrs">Mrs</option>
+                </select>
+                <span class="error"></span>
+            </div>
+            <div>
                 <label for="">First Name</label>
-                <input type="text" name="firstName">
+                <input type="text" name="firstName" id="firstName">
                 <span class="error"></span>
             </div>
             <div>
                 <label for="">Last Name</label>
-                <input type="text" name="lastName">
+                <input type="text" name="lastName" id="lastName">
                 <span class="error"></span>
             </div>
             <div>
                 <label for="">Email</label>
-                <input type="text" name="email">
+                <input type="text" name="email" id="email">
                 <span class="error"></span>
             </div>
             <div>
                 <label for="">Password</label>
-                <input type="password" name="password">
+                <input type="password" name="password" id="password">
                 <span class="error"></span>
             </div>
             <div>
                 <label for="">Confirm Password</label>
-                <input type="password" name="confirmPassword">
+                <input type="password" name="confirmPassword" id="confirmPassword">
                 <span class="error"></span>
             </div>
             <div>
-                <input type="checkbox" name="privicyPolicy" checked> I agree the terms and conditions.
+                <input type="checkbox" name="acceptTerms" value="true" checked id="acceptTerms"> I agree the terms and
+                conditions.
             </div>
-            
+
         </form>
         <button onclick="getvalue()">Submit</button>
     </div>
