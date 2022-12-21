@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-12">
+            <form id="frm">
+
+                <h1> Sign Up </h1>
+
+
+                <label for="">Please Enter Ms/Miss/Mrs: </label>
+                <select name="title" id="title">
+                    <option value="Mr">Mr</option>
+                    <option value="Miss">Miss</option>
+                    <option value="Mrs">Mrs</option>
+                </select>
+                <p class="error"></p>
+
+
+                <label for="">First Name</label>
+                <input type="text" name="firstName" id="firstName">
+                <p class="error"></p>
+
+
+                <label for="">Last Name</label>
+                <input type="text" name="lastName" id="lastName">
+                <p class="error"></p>
+
+
+                <label for="">Email</label>
+                <input type="text" name="email" id="email">
+                <p class="error"></p>
+
+
+                <label for="">Password</label>
+                <input type="password" name="password" id="password">
+                <p class="error"></p>
+
+
+                <label for="">Confirm Password</label>
+                <input type="password" name="confirmPassword" id="confirmPassword">
+                <p class="error"></p>
+
+
+                <input type="checkbox" name="acceptTerms" value="true" checked id="acceptTerms"> I agree the terms
+                and
+                conditions.
+
+                <!-- <input type="button" onclick="getvalue()" value="submit"> -->
+            </form>
+            <button onclick="getvalue()">Submit</button>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
