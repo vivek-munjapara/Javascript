@@ -51,10 +51,11 @@ select {
     
 }
 
-/* .btn {
-    width: 100%;
-} */
-
+.row {
+    display: flex;
+    justify-content: center;
+    /* margin: auto; */
+}
 
 input[type="radio"],
 input[type="checkbox"] {

@@ -67,7 +67,7 @@ select {
     border-radius: 2px;
 }
 button {
-    /* text-align: center; */
+    
     padding: 19px 39px 18px 39px;
     color: #FFF;
     background-color: #4bc970;
@@ -79,7 +79,8 @@ button {
     border: 1px solid #3ac162;
     border-width: 1px 1px 3px;
     box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
-    margin-left: 530px;
+    margin: 10px auto;
+    
 }
 
 fieldset {
@@ -120,6 +121,11 @@ label.light {
     color: #ff0000;
 }
 
+.row {
+    display: flex;
+    justify-content: center;
+}
+
 
 @media screen and (min-width: 480px) {
 
@@ -127,5 +133,10 @@ label.light {
         max-width: 480px;
 
     }
+
+        .col-md-12 button{
+            max-width: 480px;
+    
+        }
 
 }
