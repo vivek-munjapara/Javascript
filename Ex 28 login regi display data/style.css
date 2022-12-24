@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 *,
 *:before,
 *:after {
@@ -67,13 +71,13 @@ select {
     height: 32px;
     border-radius: 2px;
 }
-button {
+.btn button {
     /* text-align: center; */
     padding: 19px 39px 18px 39px;
     color: #FFF;
     background-color: #4bc970;
     font-size: 18px;
-    text-align: center;
+    /* text-align: center; */
     font-style: normal;
     border-radius: 5px;
     width: 439px;
@@ -121,14 +125,26 @@ label.light {
     color: #ff0000;
 }
 
-.container{
-    max-width: 1200px;
+.conS{
+    max-width: 100%;
     margin: auto;
 }
+/* .dashboard{ */
+    /* width: 100vw; */
+/* } */
 .dashboard img{
     width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
-
+header{
+    width: 100%;
+}
+.bgo{
+    background-color: #0000007d;
+}
 
 @media screen and (min-width: 480px) {
 

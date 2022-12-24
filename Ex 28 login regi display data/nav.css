@@ -6,13 +6,6 @@
     box-sizing: border-box;
 }
 
-header {
-    background-color: rgb(0, 0, 0);
-}
-
-.bg-dark {
-    background-color: rgba(0, 0, 0, 0.647) !important;
-}
 
 body {
     font-family: "Raleway", sans-serif;
