@@ -622,8 +622,13 @@
         displaytable(myObj);
 
         function displaytable(printA) {
-            let disarray = printA.map(function (value) {
-                return `<tr><td>${value.userId}</td><td>${value.id}</td><td>${value.title}</td><td>${value.body}</td></tr>`;
+            let disarray = printA.map((value)=> {
+                return `<tr>
+                            <td>${value.userId}</td>
+                            <td>${value.id}</td>
+                            <td>${value.title}</td>
+                            <td>${value.body}</td>
+                        </tr>`;
             })
             // console.log(disarray);
             document.getElementById("tbl").innerHTML = disarray.join("");
@@ -632,7 +637,7 @@
         function search() {
             let searchInput = document.getElementById("searchdata").value;
 
-            let resultdata = myObj.filter(function (value) {
+            let resultdata = myObj.filter((value)=> {
 
                 return value.body.indexOf(searchInput) != -1;
 

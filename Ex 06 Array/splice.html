@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <input type="text" id="item">
+    <input type="text" id="name" placeholder="Please input Your Name">
     <button onclick="add()">Submit</button>
 
     <div id="display"></div>
@@ -17,29 +17,40 @@
     <script>
         let myArray = [];
 
-        function display() {
+        display = () => {
+
             let text = "";
 
             for (let i = 0; i < myArray.length; i++) {
-                // text += myArray[i] + "<button onclick='dlt (" + myArray.indexOf(myArray[i]) + ")'>Delete</button>" + `</br>`
-                text += myArray[i] + `<button onclick="dlt (` + myArray.indexOf(myArray[i]) + `) ">Delete</button>` + `</br>`
+
+                text += myArray[i] + ` <button onclick="dlt (` + myArray.indexOf(myArray[i]) + `) ">Delete</button>` + `</br>`
             }
+
+            // console.log(myArray);
+
             document.getElementById('display').innerHTML = text;
         }
-        function add() {
 
-            let item = document.getElementById("item").value;
+
+
+        add = () => {
+
+            let item = document.getElementById("name").value;
 
             myArray.push(item);
 
-            // console.log(myArray);
+            document.getElementById("name").value = "";
+
             display();
 
         }
-        function dlt(a) {
+
+
+
+        dlt = (a) => {
 
             myArray.splice(a, 1)
-            console.log(a);
+            // console.log(a);
             display();
         }
 

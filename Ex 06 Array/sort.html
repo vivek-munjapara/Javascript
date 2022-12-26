@@ -16,13 +16,17 @@
 
     <div id="display"></div>
     <div id="result"></div>
+    <div id="result2"></div>
 
     <script>
         // 
-        let myArray = ["surat", "rajkot", "vadodara", "mehshana"];
+        // let myArray = ["surat", "rajkot", "vadodara", "mehshana"];
 
+        let myArray = [];
 
         function add() {
+
+
             let value = document.getElementById("citynm").value;
 
             if (value == "") {
@@ -30,15 +34,23 @@
             } else {
                 myArray.push(value);
             }
+            document.getElementById("display").innerHTML += `${value} <br>`
 
+            document.getElementById("citynm").value = "";
         }
 
 
         function srt() {
-            let sorted = myArray.sort(function (a, b) {
+            let sortedAlpha = myArray.sort();                                        // alphabeticlly
+            
+            document.getElementById('result').innerHTML = `<h5> Sorted Alphabatically </h5>` + sortedAlpha.join("<br>");
+           
+           
+           
+            let sortedLenght = myArray.sort((a, b) => {                                   //length wise
                 return a.length - b.length;
             })
-            document.getElementById('result').innerHTML = sorted.join(" ");
+            document.getElementById('result2').innerHTML = `<h5>Sorted Length wise </h5>` + sortedLenght.join("<br>");
         }
 
     </script>
