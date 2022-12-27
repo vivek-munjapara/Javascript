@@ -1,9 +1,46 @@
-div {
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap');
 
-    font-size: 30px;
-    font-weight: bold;
-    margin: 15% auto;
-    width: 50%;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comfortaa', cursive;
+    /* font-family: 'Jura', sans-serif; */
+}
+
+body {
+    background-image: url(Images/wallpaper-7042708_12800.jpg);
+    background-size: 100vw;
+    background-repeat: no-repeat;
+}
+
+.clock {
+    position: absolute;
+    top: 14%;
+    left: 53%;
+    transform: translateX(-20%) translateY(-20%);
+    color: #625b49;
+    font-size: 60px;
     text-align: center;
-    color: blue;
+    letter-spacing: 6px;
+}
+
+.clockReverce {
+    position: absolute;
+    width: 70%;
+    top: 76%;
+    left: 8%;
+    transform: translateX(-20%) translateY(-20%);
+    color: #625b49;
+    font-size: 60px;
+    text-align: center;
+    letter-spacing: 6px;
+}
+
+p {
+    display: inline-block;
+    width: 537px;
+    text-shadow: -5px 1px 10px #ffffff;
 }
