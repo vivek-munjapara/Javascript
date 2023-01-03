@@ -1,13 +1,10 @@
 // https://fakestoreapi.com/products
+let myArray = [];
 
-
-async function search() {
+async function api() {
 
     let url = await fetch("https://fakestoreapi.com/products")
     let productData = await url.json();
-
-
-
 
     await new Promise((success, reject) => {
         if (url.status == 200) {
@@ -17,9 +14,14 @@ async function search() {
         }
     })
 }
-// search();
+api();
 
 display = (data) => {
+
+    myArray = data;
+
+    document.getElementById("headrow").innerHTML = ""
+
     for (const key in data[0]) {
         document.getElementById("headrow").innerHTML += `<th>${key}</th>`
     }
@@ -29,13 +31,28 @@ display = (data) => {
         tbl = "";
 
         for (const key in element) {
+
             if (key == "image") {
                 tbl += `<td><img src="${element[key]}" width=100px></td>`
             } else {
                 tbl += `<td>${element[key]}</td>`
             }
+
         }
+
         return `<tr>${tbl}</tr>`
 
     }).join("");
+}
+
+search = () => {
+    // myData = productData;
+    let input = document.getElementById("inpt").value;
+
+    let searchData = myArray.filter((value) => {
+        let v = Object.values(value).join(" ");
+        return v.indexOf(input) != -1;
+    })
+    // console.log(searchData);
+    display(searchData);
 }

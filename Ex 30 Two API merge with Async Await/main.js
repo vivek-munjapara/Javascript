@@ -1,4 +1,4 @@
-let newArray = [];
+// let newArray = [];
 
 async function getValue() {
     let error = [
