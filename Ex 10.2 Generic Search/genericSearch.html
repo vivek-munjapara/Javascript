@@ -11,19 +11,25 @@
 
 <body>
 
-    <div class="container search">
-        <input type="text" id="inpt" placeholder="Please search here....">
-        <button onclick="search()">Search</button>
-    </div>
-    <div>
-        <table id="customers">
-            <thead>
-                <tr id="headrow">
+    <div class="container">
+        <div class="search">
+            <input type="text" id="inpt" placeholder="Please search here....">
+            <button onclick="search()">Search</button>
+        </div>
+
+
+        <div>
+            <table id="customers">
+                <thead>
+                    <tr id="headrow">
                     
-                </tr>
-            </thead>
-            <tbody id="tbl"></tbody>
-        </table>
+                    </tr>
+                </thead>
+                <tbody id="tbl">
+                    <span id="spn"></span>
+                </tbody>
+            </table>
+        </div>
     </div>
 
 

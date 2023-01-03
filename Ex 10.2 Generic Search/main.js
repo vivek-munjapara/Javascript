@@ -53,6 +53,16 @@ search = () => {
         let v = Object.values(value).join(" ");
         return v.indexOf(input) != -1;
     })
-    // console.log(searchData);
-    display(searchData);
+
+
+    document.getElementById("spn").innerHTML = ``
+
+    if (input.length == 0) {
+        api();
+    } else if (searchData.length == 0) {
+        document.getElementById("spn").innerHTML = `There is no such a input you enterd`
+    } else {
+        display(searchData);
+        console.log(searchData)
+    }
 }
