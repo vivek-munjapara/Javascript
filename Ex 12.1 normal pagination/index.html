@@ -7,105 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/e753c6f55b.js" crossorigin="anonymous"></script>
     <title>Table Print</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        table,
-        td,
-        th {
-            border: 1px solid;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        #customers {
-            font-family: Arial, Helvetica, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        #customers td,
-        #customers th {
-            border: 1px solid #ddd;
-            padding: 8px;
-        }
-
-        #customers tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-        #customers tr:hover {
-            background-color: #ddd;
-        }
-
-        #customers th {
-            padding-top: 12px;
-            padding-bottom: 12px;
-            text-align: left;
-            background-color: #04AA6D;
-            color: white;
-        }
-
-        img {
-            width: 100px;
-        }
-
-        h1 {
-            text-align: center;
-            color: purple;
-        }
-
-        .list {
-            display: flex;
-            justify-content: center;
-        }
-
-        select,
-        input {
-            margin: 10px;
-            width: 250px;
-            padding: 5px;
-            font-size: 18px;
-        }
-
-        .btn {
-            margin: 10px;
-            padding: 5px 33px;
-            font-size: 18px;
-            border: 2px solid blue;
-            border-radius: 8px;
-            background: transparent;
-            color: blue;
-            transition: 0.5s ease-in-out;
-        }
-
-        .btn:hover {
-            background-color: blue;
-            color: white;
-        }
-
-        button {
-            margin: 5px;
-            padding: 8px;
-        }
-
-        .page {
-            width: 30%;
-            margin: auto;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -118,7 +21,6 @@
                     <th>id</th>
                     <th>title</th>
                     <th>completed</th>
-
                 </tr>
             </thead>
             <tbody id="test">
@@ -127,9 +29,9 @@
         </table>
 
         <div class="page">
-            <button onclick="preButton()"> &lt;</button>
+            <button onclick="preButton()"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
             <span id="btn"></span>
-            <button onclick="nextButton()"> &gt;</button>
+            <button onclick="nextButton()"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
         </div>
     </div>
 

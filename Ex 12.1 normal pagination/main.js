@@ -40,7 +40,7 @@ function disButton(start, end) {
   for (i = start; i <= end; i++) {
     document.getElementById(
       "btn"
-    ).innerHTML += `<button onclick="pageButton(${i})">${i}</button>`;
+    ).innerHTML += `<button onclick="pageButton(${i})"><strong>${i}</strong></button>`;
   }
 }
 
