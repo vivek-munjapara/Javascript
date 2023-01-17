@@ -1,17 +1,40 @@
-/* 
- * Always set the map height explicitly to define the size of the div element
- * that contains the map. 
- */
-#map {
-    height: 100%;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,900&display=swap');
 
-/* 
- * Optional: Makes the sample page fill the window. 
- */
+:root {
+    --grdent: linear-gradient(90deg, rgba(251, 246, 67, 1) 0%, rgba(246, 128, 11, 1) 10%, rgba(255, 63, 63, 1) 20%, rgba(245, 255, 81, 1) 30%, rgba(45, 233, 244, 1) 40%, rgba(147, 184, 249, 1) 50%, rgba(119, 148, 174, 1) 60%, rgba(255, 82, 139, 1) 70%, rgba(239, 111, 255, 1) 80%, rgba(255, 106, 216, 1) 90%, rgba(252, 176, 69, 1) 100%);
+}
 html,
 body {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#map {
+    height: 90%;
+}
+
+/* .grdent {
+    background: rgb(251, 246, 67);
+    background: var(--grdent);
+} */
+
+h3 {
+
+    text-align: center;
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 8px;
+}
+
+h3:after {
+    content: "This is your current location";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, 50%);
+    padding-top: 5px;
+    font-size: 12px;
 }
