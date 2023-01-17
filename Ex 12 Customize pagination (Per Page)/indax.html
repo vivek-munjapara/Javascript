@@ -26,16 +26,19 @@
         </tbody>
     </table>
 
-    <!-- <button onclick="pre()">Previous</button> -->
-    <span id="btn"></span>
-    <!-- <button onclick="next()">Next</button> -->
-    
-    <select id="perPagedisplay" onchange="displayAdd()">
-        <option value="5">5</option>
-        <option value="10">10</option>
-        <option value="15">15</option>
-        <option value="20">20</option>
-    </select>
+    <div class="page">
+        <!-- <button onclick="preButton()"><i class="fa fa-chevron-left" aria-hidden="true"></i></button> -->
+        <span id="btn"></span>
+        <!-- <button onclick="nextButton()"><i class="fa fa-chevron-right" aria-hidden="true"></i></button> -->
+
+        <label for="">Per Page</label>
+        <select id="perPagedisplay" onchange="displayAdd()">
+            <!-- <option value="5">5</option> -->
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+        </select>
+    </div>
 
 
 

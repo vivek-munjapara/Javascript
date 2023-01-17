@@ -1229,7 +1229,7 @@ function displayData(start, end) {
                     <td>${value.userId}</td>
                     <td>${value.title}</td>
                     <td>${value.completed}</td> 
-                    </tr>`;
+            </tr>`;
   });
 
   document.getElementById("tbl").innerHTML = filterData.join("");
@@ -1243,7 +1243,7 @@ function disButton(a, b) {
   for (let index = a; index <= b; index++) {
     document.getElementById(
       "btn"
-    ).innerHTML += `<button onclick="button(${index})">${index}</button>`;
+    ).innerHTML += `<button onclick="button(${index})"><strong>${index}</strong></button>`;
   }
 }
 
